@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .middle {
+            height: 1px;
+            background-color: black;
+        }
+
+        .broderRight {
+            border-right: 2px solid black;
+        }
+
+        .borderBottom {
+            border-bottom: 2px solid black;
+        }
+
+        .arrowBlow {
+            height: 3px;
+            margin-top: 1px;
+            background-color: black;
+        }
+
+        .InnerDiv {
+            padding: 10px 10px;
+        }
+
+        .outer-div {
+            margin: 40px auto;
+            font-weight: bold;
+            width: 75%;
+            border: 2px solid black;
+        }
+
+        .bottomNav {
+            margin: 20px 0px;
+        }
+
+        .bottomDiv {
+            margin-top: 20px;
+        }
+
+        .bottomDivInner {
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            text-align: center;
+        }
+
+        .invoiceHeader {
+            padding: 20px 10px;
+            background-color: black;
+            color: red;
+        }
+
+        .innerDataColor {
+            background-color: black;
+            color: red;
+            padding: 20px 10px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+    <title>Invoice</title>
+</head>
+
+<body class="outer-div">
+    <div class="invoiceHeader text-center borderBottom">Invoice</div>
+    <div>
+        <div class="InnerDiv">
+            {{!-- Billing info --}}
+            <div class="box">
+                <p>Invoice No : AWG{{RRN}}</p>
+                <p>RRN : {{RRN}}</p>
+                <p>Invoice Date : {{Txndate}}</p>
+                <p> Reference Id : {{RefId}}</p>
+            </div>
+        </div>
+        <div class="InnerDiv">
+            <div class="box">
+                <p>Bill form :- </p>
+                <p>MEDITERRANCE PRIVATE LIMITED</p>
+                <p> Add : P.N. 10/G-3,GOKUL NAGAR GOKULPURA, JHOTWARA,</p>
+                <p> JAIPUR, PINCODE - 302012</p>
+                <p> GSTIN: 08AASCM2662F1Z6</p>
+            </div>
+        </div>
+
+        <div class="InnerDiv">
+            <div class="box">
+                </p>Bill to :- </p>
+                </p>{{MerchantName}}</p>
+                </p>Mobile : {{MobileNumber}}</p>
+            </div>
+            <div class="bottomDiv">
+                <div class="bottomDivInner">
+                    <div class="col-6 broderRight">
+                        <div class="innerDataColor borderBottom">DESCRIPTION</div>
+                        <div class="bottomNav">
+                            DEPOSIT FOR THE CONTEST ENTRY FEE
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="innerDataColor borderBottom">AMOUNT</div>
+                        <div class="bottomNav">
+                            {{Txnamount}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #000;
+            /* Added Border */
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f8f8;
+        }
+
+        .terms {
+            margin-bottom: 20px;
+        }
+
+        .terms ol {
+            padding-left: 20px;
+        }
+
+        .payment-terms {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <h2>TAX INVOICE</h2>
+            <p>Nearason solutions private limited</p>
+            <p>Floor No., Plot No. 5, Jyoti Vihar Vista, Maniyawas, Mansarovar,</p>
+            <p>Rajasthan, 302020</p>
+        </div>
+
+        <div class="invoice-details">
+            <div>
+                <p><strong>Invoice No.:</strong>IN{{RRN}}</p>
+                <p><strong>Order Id:</strong>OI{{RRN}}</p>
+                <p><strong>Transaction Id:</strong>{{RefId}}</p>
+                <p><strong>Payment Status:</strong></p>
+                <p><strong>Name:</strong>{{MerchantName}}</p>
+            </div>
+            <div>
+                <p><strong>GSTN:</strong> GSAAJCN0156L1Z1</p>
+                <p><strong>Date:</strong>{{Txndate}}</p>
+                <p><strong>Contact No.:</strong>{{MobileNumber}}</p>
+                <p><strong>Email:</strong> hello@nearason.com</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Product</th>
+                    <th>QTY</th>
+                    <th>Unit Rate</th>
+                    <th>Amount</th>
+                    <th>Discount</th>
+                    <th>GST</th>
+                    <th>Net Amount (Rs)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SN{{RRN}}</td>
+                    <td>{{Description}}</td>
+                    <td>1</td>
+                    <td></td>
+                    <td>{{Txnamount}}</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{Txnamount}}</td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right;"><strong>Total</strong></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="terms">
+            <h3>Terms:</h3>
+            <ol>
+                <li>Payment will be on immediate basis.</li>
+                <li>All the services from this app are non-refundable.</li>
+                <li>This is inclusive of GST.</li>
+                <li>This is an electronically generated invoice, hence does not require a signature.</li>
+            </ol>
+        </div>
+
+        <div class="payment-terms">
+            PAYMENT TERMS: IMMEDIATE
+        </div>
+
+        <div class="footer">
+            <p>Nearason solutions private limited</p>
+            <p>Plot No. 5, Jyoti Vihar Vista, Maniyawas, Mansarovar, Jaipur 302020, Rajasthan</p>
+            <p>GSTN: GSAAJCN0156L1Z1 | Phone: +91 9314355542</p>
+        </div>
+
+        <div class="signature">
+            <p>Digital Signature</p>
+        </div>
+    </div>
+</body>
+
+</html>

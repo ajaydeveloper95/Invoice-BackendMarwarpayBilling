@@ -1,0 +1,43 @@
+{
+  "name": "marwarpay-backend",
+  "version": "1.0.0",
+  "description": "merwarpay backend . using for the payment gatway features.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "prod": "node ./src/index.js"
+  },
+  "keywords": [
+    "marwarpay",
+    "marwarpay",
+    "payment",
+    "gatway"
+  ],
+  "author": "ajay budaniya",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "bcrypt": "^5.1.1",
+    "celebrate": "^15.0.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fs-extra": "^11.2.0",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "log4js": "^6.9.1",
+    "mongoose": "^8.5.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.15.0",
+    "pug": "^3.0.3",
+    "puppeteer": "^23.0.2",
+    "shortid": "^2.2.16",
+    "xlsx": "^0.18.5",
+    "zip-a-folder": "^3.1.7"
+  }
+}
