@@ -23,7 +23,7 @@
         .company-name {
             font-weight: bold;
             font-size: 1.2em;
-            margin-bottom: 5px;
+            margin-top: 15px;
         }
 
         .invoice-details {
@@ -31,6 +31,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             margin-bottom: 20px;
+            line-height: 18px;
         }
 
         .invoice-details div {
@@ -75,13 +76,15 @@ tbody {
         .payment-terms {
             text-align: center;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 20px 0 5px 0;
+            color:red;
         }
 
         .footer {
-            margin-top: 40px;
+            margin-top: 0px;
             text-align: center;
             font-size: 0.9em;
+            
         }
 
         .signature {
@@ -92,7 +95,7 @@ tbody {
 </head>
 <body>
     <div class="header">
-        <div class="company-name">TAX INVOICE</div>
+        <div class="company-name" style="font-size:26px">TAX INVOICE</div>
         <div class="company-name">IMPACTPEAK PRIVATE LIMITED</div>
         <div>Floor No.: A-12 2nd Floor, Shree Kanhaiya Mansion, Vaishali Nagar, Jaipur</div>
         <div>Rajasthan,302021</div>
@@ -101,17 +104,17 @@ tbody {
     <div class="invoice-details">
 
         <div>
-            <div>Invoice No: <span id="invoiceNo">IN{{RRN}}</span></div>
-            <div>Order Id : RRN No.{{RRN}}</div>
-            <div>Transaction Id:{{RefId}}</div>
-            <div>Transaction Date:{{Txndate}}</div>
-            <div>Name:{{MerchantName}}</div>
-            <div>Phone No.:-{{MobileNumber}}</div>
+            <div><strong>Invoice No: </strong><span id="invoiceNo">IN{{RRN}}</span></div>
+            <div><strong>Order Id: </strong> RRN No.{{RRN}}</div>
+            <div><strong>Transaction Id:</strong>{{RefId}}</div>
+            <div><strong>Transaction Date:</strong>{{Txndate}}</div>
+            <div><strong>Name:</strong>{{MerchantName}}</div>
+            <div><strong>Phone No.:-</strong>{{MobileNumber}}</div>
         </div>
         <div>
-            <div>GSTIN: 08AAHCI8381C1ZF</div>
-            <div>Contact No.: {{MobileNumber}}</div>
-            <div>Email: - impactpeakpvtltd@gmail.com</div>
+            <div><strong>GSTIN:</strong> 08AAHCI8381C1ZF</div>
+            <div><strong>Contact No.:</strong> {{MobileNumber}}</div>
+            <div><strong>Email: -</strong> impactpeakpvtltd@gmail.com</div>
         </div>
     </div>
 
@@ -121,7 +124,7 @@ tbody {
                 <th>S. No.</th>
                 <th>Product</th>
                 <th>QTY</th>
-                <th>SAC RRN No.</th>
+                <th>SAC</th>
                 <th>Gross Amount</th>
                 <th>Discount %</th>
                 <th>GST</th>
@@ -135,8 +138,8 @@ tbody {
                 <td>1</td>
                 <td></td>
                 <td>{{Txnamount}}</td>
-                <td></td>
-                <td></td>
+                <td>0</td>
+                <td>18%</td>
                 <td>{{Txnamount}}</td>
             </tr>
             <tr>
@@ -166,14 +169,14 @@ tbody {
     <div class="payment-terms">PAYMENT TERMS: IMMEDIATE</div>
 
     <div class="footer">
-        <div>IMPACTPEAK PRIVATE LIMITED</div>
+        <div style="font-size:15px;font-weight:bold">IMPACTPEAK PRIVATE LIMITED</div>
         <div>Floor No.: A-12 2nd Floor, Shree Kanhaiya Mansion, Vaishali Nagar, Jaipur,Rajasthan 302021</div>
         <div>GSTIN: 08AAHCI8381C1ZF | https://impactstore.in/</div>
     </div>
 
     <div class="signature">
         Digital Signature<br>
-        (Computer Generated)
+        <p style="font-size: 10px;">(Computer generated Invoice)</p>
     </div>
 </body>
 </html>
