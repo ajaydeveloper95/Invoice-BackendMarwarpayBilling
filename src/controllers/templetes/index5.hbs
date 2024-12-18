@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border:1px solid #000;
+        }
+        
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .company-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .invoice-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .invoice-details div {
+            margin-bottom: 5px;
+        }
+
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    page-break-inside: auto;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .terms {
+            margin-bottom: 20px;
+        }
+
+        .terms ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .payment-terms {
+            text-align: center;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-name">TAX INVOICE</div>
+        <div class="company-name">IMPACTPEAK PRIVATE LIMITED</div>
+        <div>Floor No.: A-12 2nd Floor, Shree Kanhaiya Mansion, Vaishali Nagar, Jaipur</div>
+        <div>Rajasthan,302021</div>
+    </div>
+
+    <div class="invoice-details">
+
+        <div>
+            <div>Invoice No: <span id="invoiceNo">IN{{RRN}}</span></div>
+            <div>Order Id : RRN No.{{RRN}}</div>
+            <div>Transaction Id:{{RefId}}</div>
+            <div>Transaction Date:{{Txndate}}</div>
+            <div>Name:{{MerchantName}}</div>
+            <div>Phone No.:-{{MobileNumber}}</div>
+        </div>
+        <div>
+            <div>GSTIN: 08AAHCI8381C1ZF</div>
+            <div>Contact No.: {{MobileNumber}}</div>
+            <div>Email: - impactpeakpvtltd@gmail.com</div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>S. No.</th>
+                <th>Product</th>
+                <th>QTY</th>
+                <th>SAC RRN No.</th>
+                <th>Gross Amount</th>
+                <th>Discount %</th>
+                <th>GST</th>
+                <th>Net Amount (Rs)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SN{{RRN}}</td>
+                <td>{{Description}}</td>
+                <td>1</td>
+                <td></td>
+                <td>{{Txnamount}}</td>
+                <td></td>
+                <td></td>
+                <td>{{Txnamount}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="font-weight: bold;">Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <div class="terms"> 
+        <strong>Terms:</strong>
+        <ol>
+            <li>Payment will be on immediate basis.</li>
+            <li>All the services from this app are non-refundable.</li>
+            <li>This is inclusive of GST.</li>
+            <li>This is an electronically generated invoice, hence does not require a signature.</li>
+        </ol>
+    </div>
+    
+    <div class="payment-terms">PAYMENT TERMS: IMMEDIATE</div>
+
+    <div class="footer">
+        <div>IMPACTPEAK PRIVATE LIMITED</div>
+        <div>Floor No.: A-12 2nd Floor, Shree Kanhaiya Mansion, Vaishali Nagar, Jaipur,Rajasthan 302021</div>
+        <div>GSTIN: 08AAHCI8381C1ZF | https://impactstore.in/</div>
+    </div>
+
+    <div class="signature">
+        Digital Signature<br>
+        (Computer Generated)
+    </div>
+</body>
+</html>
