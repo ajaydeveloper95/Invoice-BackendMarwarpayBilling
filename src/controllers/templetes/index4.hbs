@@ -17,8 +17,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            border: 2px solid #000;
-            /* Added Border */
+            border: 2px solid #000; /* Added Border */
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
         }
@@ -26,13 +25,17 @@
         .header {
             text-align: center;
             margin-bottom: 20px;
+            line-height: 3px;
         }
-
+        .header h2{
+            margin-bottom:35px;
+        }
         .invoice-details {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 50px;
             margin-bottom: 20px;
+            line-height: 6px;
         }
 
         table {
@@ -41,8 +44,7 @@
             margin-bottom: 20px;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
@@ -63,13 +65,15 @@
         .payment-terms {
             text-align: center;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 20px 0 10px 0;
+            color:red;
         }
 
         .footer {
             text-align: center;
             font-size: 0.9rem;
-            margin-top: 20px;
+            margin-top: 10px;
+            line-height: 3px;
         }
 
         .signature {
@@ -84,21 +88,25 @@
     <div class="invoice-container">
         <div class="header">
             <h2>TAX INVOICE</h2>
-            <p>Nexeraon solutions private limited</p>
-            <p>Plot No. 5, Jyoti Vihar Vistar, Manyawas, Mansarovar</p>
+            <p style="font-size:20px;" ><strong>Nexeraon solutions private limited</strong></p>            
+            <p style="font-size:14px;">Plot No. 5, Jyoti Vihar Vistar, Manyawas, Mansarovar</p>
             <p>Rajasthan, 302020</p>
         </div>
 
         <div class="invoice-details">
+
             <div>
+                <p><strong>Name:</strong>{{MerchantName}}</p>
                 <p><strong>Invoice No.:</strong>IN{{RRN}}</p>
                 <p><strong>Order Id:</strong>OI{{RRN}}</p>
                 <p><strong>Transaction Id:</strong>{{RefId}}</p>
-                <p><strong>Payment Status:</strong></p>
-                <p><strong>Name:</strong>{{MerchantName}}</p>
+                <p><strong>Transaction Date:</strong>{{Txndate}}</p>
+                
             </div>
+
+
             <div>
-                <p><strong>RRN No.:{{RRN}}</strong></p>
+                <p><strong>RRN No.:</strong>{{RRN}}</p>
                 <p><strong>GSTN:</strong> GSAAJCN0156L1Z1</p>
                 <p><strong>Date:</strong>{{Txndate}}</p>
                 <p><strong>Contact No.:</strong>{{MobileNumber}}</p>
@@ -112,11 +120,11 @@
                     <th>S.No.</th>
                     <th>Product</th>
                     <th>QTY</th>
-                    <th>Unit Rate</th>
-                    <th>Amount</th>
-                    <th>Discount</th>
+                    <th>SAC</th>
+                    <th>Gross Amount</th>
+                    <th>Discount %</th>
                     <th>GST</th>
-                    <th>Net Amount (Rs)</th>
+                    <th>Net Amount(Rs)</th>
                 </tr>
             </thead>
             <tbody>
@@ -126,8 +134,8 @@
                     <td>1</td>
                     <td></td>
                     <td>{{Txnamount}}</td>
-                    <td></td>
-                    <td></td>
+                    <td>0</td>
+                    <td>18%</td>
                     <td>{{Txnamount}}</td>
                 </tr>
                 <tr>
@@ -158,9 +166,9 @@
         </div>
 
         <div class="footer">
-            <p>Nearason solutions private limited</p>
-            <p>Plot No. 5, Jyoti Vihar Vista, Maniyawas, Mansarovar, Jaipur 302020, Rajasthan</p>
-            <p>GSTN: GSAAJCN0156L1Z1 | Phone: +91 9314355542</p>
+            <p style="font-size:17px"><strong>Nexeraon solutions private limited</strong></p>
+            <p>Plot No. 5, Jyoti Vihar Vistar, Manyawas, Mansarovar, Jaipur: 302020, Rajasthan</p>
+            <p>GSTIN: 08AAJCN8018K1Z1 | https://www.nexeraon.com/</p>
         </div>
 
         <div class="signature">
