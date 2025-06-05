@@ -9,6 +9,7 @@ import mindMatrixRoutes from "./routes/mindmatrix.routes.js";
 import suncareRoutes from "./routes/suncare.routes.js";
 import nearasonRoutes from "./routes/nearson.routes.js";
 import impactRoutes from "./routes/impact.routes.js";
+import welexopayRoutes from "./routes/welexopay.routes.js";
 import { errors } from "celebrate";
 
 // for use body data
@@ -57,6 +58,9 @@ app.use("/v1/nearson", nearasonRoutes);
 
 // api Route for Impact solutions
 app.use("/v1/impact", impactRoutes);
+
+// api Route for Impact solutions
+app.use("/v1/welexopay", welexopayRoutes);
 
 // api Route for user Setup
 app.all("*", (req, res) => {
