@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice-New</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ccc;
+        }
+
+        .heading-section {
+            background-color: #2e62a6;
+            color: white;
+            padding: 14px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .Address {
+            font-size: 12px;
+        }
+
+        .section strong {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .table-container {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: inset 0 0 3px #ccc;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+        .table th,
+        .table td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #efefef;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            line-height: 1.5rem;
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            color: #333;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <div class="heading-section">
+            <h1>TAX INVOICE</h1>
+        </div>
+        <div class="content">
+            <div class="section">
+                <strong>Invoice No:</strong>INV{{RRN}}<br />
+                <strong>RRN:</strong> <span id="invoiceNo">{{RRN}}</span> <br />
+                <strong>Transaction Id:</strong> {{RefId}}<br />
+                <strong>Transaction date:</strong> {{Txndate}}<br />
+                <strong>Contact No.:</strong> +91 7413048037<br />
+                <strong>Email:- </strong> esrgmginformation@gmail.com<br />
+
+            </div>
+
+            <div class="section two-columns">
+                <div>
+                    <strong>Bill From:</strong><br />
+                    <strong>ESRGMG INFOTECH SOLUTION PRIVATE LIMITED</strong><br />
+                    <span class="Address">49 ROHIT KUMAR CHANDRA NAGAR,9-DUKAN, KALWAR ROAD 9-DUKAN
+                        JHOTWARA, JAIPUR, JAIPUR, RAJASTHAN, 302012<br />
+                        GSTIN: 08AAICE1082D1ZW<br />
+                        <b>Email:-</b> esrgmginformation@gmail.com
+                </div>
+
+                <div>
+
+                    <strong>Bill to:</strong><br />
+                    {{MerchantName}}<br />
+                    {{MobileNumber}} <br />
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>DESCRIPTION</th>
+                            <th>AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{Description}}</td>
+                            <td>{{Txnamount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer">
+                <span style="color: red; font-size:20px; font-weight: bold;">PAYMENT TERMS: IMMEDIATE</span><br />
+                <span><b>ESRGMG INFOTECH SOLUTION PRIVATE LIMITED</b> </span><br />
+                <span style="font-size:12px;">49 ROHIT KUMAR CHANDRA NAGAR,9-DUKAN, KALWAR ROAD 9-DUKAN
+                    JHOTWARA, JAIPUR, JAIPUR, RAJASTHAN, 302012</span><br />
+                <span>GSTIN: 08AAICE1082D1ZW | https://esrgmgstore.in/</span>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
